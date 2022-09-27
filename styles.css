@@ -9,7 +9,8 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-  background-color: bisque;
+  background-color: rgb(234, 232, 219);
+  font-size: 1.2em;
 }
 
 .page-header ul {
