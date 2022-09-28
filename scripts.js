@@ -38,7 +38,9 @@ for (let i = 0; i < data.length; i += 1) {
 	button.innerHTML = 'Add to Cart'
 	newDiv.appendChild(button)
 }
-    
+
+// -------------------------------------------------
+// Cart Calculations
 const cart = [];
 
 // -------------------------------------------------
@@ -69,7 +71,7 @@ function showItems() {
     console.log(`Cart Total: $${getTotal()}`)
 }
 
-// ------------------------------
+// -------------------------------------------------
 // total quantity Function
 function getQty() {
 	let qty = 0
@@ -79,7 +81,7 @@ function getQty() {
 	return qty
 }
 
-// -------------------------
+// -------------------------------------------------
 // cart Total function
 function getTotal() {
 	let total = 0
@@ -89,7 +91,21 @@ function getTotal() {
 	return total.toFixed(2)
 }
 
-
+function removeItem(name, qty = 0) {
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === name) {
+            if (qty > 0) {
+                cart[i].qty -= 1
+            }
+            if (cart[i].qty < 1 || qty === 0 ) {
+                cart.splice(i, 1) 
+            }
+            return
+        }
+    }
+}
+// -------------------------------------------------
+// Test code
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
 addItem('Opinion', 0.02)
@@ -97,5 +113,9 @@ addItem('Apple', 0.99)
 addItem('Frisbee', 9.92)
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
+showItems();
+
+removeItem('Apple', 1)
+removeItem('Frisbee')
  
 showItems();
