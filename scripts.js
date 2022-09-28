@@ -41,19 +41,61 @@ for (let i = 0; i < data.length; i += 1) {
     
 const cart = [];
 
+// -------------------------------------------------
+// function addItem to add items in the cart
+
 function addItem(name, price) {
-    const item ={name: name, price: price, qty: 1}
+    for (let i = 0; i < cart.length; i += 1) {
+        if (cart[i].name === name) { 
+            cart[i].qty += 1
+            // stop here!
+            return 
+        }
+    }
+    const item ={name, price, qty: 1}
     cart.push(item)
 }
 
-
+// -------------------------------------------------
+// function showItems to show items in the cart
 function showItems() {
-    console.log(`You have ${cart.length} items in your cart.`)
+    
+    const qty = getQty();
+    console.log(`You have ${qty} items in your cart.`)
+    for (let i = 0; i < cart.length; i += 1) {
+        console.log(`- ${cart[i].name} $${cart[i].price} x ${cart[i].qty}`)
+    }
+    
+    console.log(`Cart Total: $${getTotal()}`)
 }
+
+// ------------------------------
+// total quantity Function
+function getQty() {
+	let qty = 0
+	for (let i = 0; i<cart.length; i++) {
+		qty += cart[i].qty
+	}
+	return qty
+}
+
+// -------------------------
+// cart Total function
+function getTotal() {
+	let total = 0
+	for (let i = 0; i < cart.length; i++) {
+		total += cart[i].price * cart[i].qty
+	}
+	return total.toFixed(2)
+}
+
 
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
 addItem('Opinion', 0.02)
+addItem('Apple', 0.99)
 addItem('Frisbee', 9.92)
+addItem('Apple', 0.99)
+addItem('Orange', 1.29)
  
 showItems();
