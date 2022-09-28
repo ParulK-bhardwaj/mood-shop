@@ -48,6 +48,14 @@ for (let i = 0; i < data.length; i += 1) {
 }
 
 // -------------------------------------------------
+// to select all buttons 
+const all_items_button = Array.from(document.querySelectorAll("button"))
+all_items_button.forEach(elt => elt.addEventListener('click', () => {
+    addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
+    showItems()
+  }))
+// console.log(all_items_button)
+// -------------------------------------------------
 // Cart Calculations
 const cart = [];
 
