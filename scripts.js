@@ -191,16 +191,16 @@ function updateCart(name, qty) {
 showItems();
 // -------------------------------------------------
 // Test code
-addItem('Apple', 0.99)
-addItem('Orange', 1.29)
-addItem('Opinion', 0.02)
-addItem('Apple', 0.99)
-addItem('Frisbee', 9.92)
-addItem('Apple', 0.99)
-addItem('Orange', 1.29)
-showItems();
+// addItem('Apple', 0.99)
+// addItem('Orange', 1.29)
+// addItem('Opinion', 0.02)
+// addItem('Apple', 0.99)
+// addItem('Frisbee', 9.92)
+// addItem('Apple', 0.99)
+// addItem('Orange', 1.29)
+// showItems();
 
-removeItem('Apple', 1)
-removeItem('Frisbee')
+// removeItem('Apple', 1)
+// removeItem('Frisbee')
  
-showItems();
+// showItems();
