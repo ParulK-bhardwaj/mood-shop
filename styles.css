@@ -3,87 +3,137 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
-  }
+    background-color: rgb(34, 68, 128);
+}
 
-  .page-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-  background-color: rgb(234, 232, 219);
-  font-size: 1.2em;
+.page-header {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: rgb(219, 223, 234);
+font-size: 1.2em;
+padding: 0 0.5em;
 }
 
 .page-header ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-  }
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+list-style: none;
+padding: 0.2em 0.5em;
+}
 
-  .page-header a {
-    display: block;
-    padding:0.5em;
-    text-decoration:none;
-  }
-  .items {
-    width: 80%;
-    margin: auto;
-    padding: 1em;
+.page-header a {
+display: block;
+padding:0.5em;
+text-decoration:none;
+font-weight: bold;
+}
+.page-header h4 {
+display: block;
+padding:0.5em;
+text-decoration:none;
+font-weight: bold;
+color: navy;
+font-size: 1.5em;
+}
 
-    border-color: black;
-    border-width: .1em;
-    border-style:inset;
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
-  }
+.items {
+width: 80%;
+margin: auto;
+padding: 1em;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 1em;
 
-  .items img {
-    width: 100%;
-    height: auto;
+}
 
-    border-color: black;
-    border-width: .1em;
-    border-style: outset;
-  }
+.items img {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:end;
+width: 100%;
+height: auto;
 
-  .items P {
-    width: 100%;
-    height: auto;
-    align-self: center;
-    border-style: outset;
-    text-align: center;
-  }
+}
 
-  .item p:nth-child(1) {
-    font-weight: bolder;
-    
-  }
+.item {
+display: flex;
+flex-direction: column;
+border: solid 2px #a6c0f5;
+background-color: rgb(218, 227, 244);
+align-items: stretch;
+justify-content: flex-end;
+}
 
-  .item p:nth-child(2) {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.5em 0
-  }
+.item P {
+height: auto;
+align-self: center;
+text-align: center;
+}
+
+.item p:nth-child(2) {
+padding: 0.5em 0; 
+}
+
+.item p:nth-child(3) {
+font-family: Arial, Helvetica, sans-serif;
+padding: 0.5em 0;
+font-weight: bold;
+color: darkblue;
+align-self: center;
+
+}
+.item p:nth-child(3):before {
+content: 'Price: $'
+}
+
+.item button {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
+padding: 0.5em 0.5em;
+/* border-color: black; */
+border-style: outset;
+background-color: rgb(3, 161, 3);
+font-weight: bolder;
+font-size: 11px;
+color: whitesmoke;
+text-transform: uppercase;
+align-self: center;
+}
+
+.item button:hover {
+background-color: rgb(87, 98, 169);
+color: black;
+font-weight: bold; 
+
+}
+
+.remove, .add-one, .remove-one, .update {
+box-sizing: auto;
+text-align: center;
+border-radius: 1em;
+padding: 0.4em;
+margin: 0.2em;
+}
 
 
-  .items button {
-    width: 100%;
-    height: auto;
-    padding: 0.5em 0.5em;
-    /* border-color: black; */
-    border-style: outset;
-    text-align: center;
-    background-color: rgb(2, 103, 2);
-    font-weight: bolder;
-    font-size: 11px;
-    color: whitesmoke;
-    text-transform: uppercase;
-    }
-    .item button:hover {
-    background-color: white;
-    color: black;
-    font-weight: bold; 
+footer {
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+align-items: center;
 
-    }
+margin: 2em 0 0 0;
+padding: 2em;
+background-color: #eef1f7;
+border-style: onset;
+}
 
+#cart-qty, #cart-total{
+    font-weight: bold;
+}
