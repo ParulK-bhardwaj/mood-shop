@@ -12,6 +12,9 @@ for (let i = 0; i < data.length; i += 1) {
 	// create a new div element and give it a class name
 	const newDiv = document.createElement('div');
 	newDiv.className = 'item'
+	const itemName = document.createElement('h2');
+    itemName.innerText = data[i].name;
+    newDiv.appendChild(itemName);
 	// create an image element
 	const img = document.createElement('img');
 	// this will change each time we go through the loop. Can you explain why?

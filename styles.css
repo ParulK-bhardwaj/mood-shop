@@ -7,131 +7,129 @@ body {
 }
 
 .page-header {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-background-color: rgb(219, 223, 234);
-font-size: 1.2em;
-padding: 0 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(219, 223, 234);
+    font-size: 1.2em;
+    padding: 0 0.5em;
 }
 
 .page-header ul {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-list-style: none;
-padding: 0.2em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0.2em 0.5em;
 }
 
 .page-header a {
-display: block;
-padding:0.5em;
-text-decoration:none;
-font-weight: bold;
+    display: block;
+    padding:0.5em;
+    text-decoration:none;
+    font-weight: bold;
 }
+
 .page-header h4 {
-display: block;
-padding:0.5em;
-text-decoration:none;
-font-weight: bold;
-color: navy;
-font-size: 1.5em;
+    display: block;
+    padding:0.5em;
+    text-decoration:none;
+    font-weight: bold;
+    color: navy;
+    font-size: 1.5em;
 }
 
 .items {
-width: 80%;
-margin: auto;
-padding: 1em;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-gap: 1em;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
 
 }
 
 .items img {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content:end;
-width: 100%;
-height: auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end;
+    width: 100%;
+    height: 100%;
 }
 
 .item {
-display: flex;
-flex-direction: column;
-border: solid 2px #a6c0f5;
-background-color: rgb(218, 227, 244);
-align-items: stretch;
-justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #a6c0f5;
+    background-color: rgb(218, 227, 244);
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .item P {
-height: auto;
-align-self: center;
-text-align: center;
-}
-
-.item p:nth-child(2) {
-padding: 0.5em 0; 
+    height: auto;
+    align-self: center;
+    text-align: center;
 }
 
 .item p:nth-child(3) {
-font-family: Arial, Helvetica, sans-serif;
-padding: 0.5em 0;
-font-weight: bold;
-color: darkblue;
-align-self: center;
-
+    padding: 0.5em 0; 
 }
-.item p:nth-child(3):before {
-content: 'Price: $'
+
+.item p:nth-child(4) {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5em 0;
+    font-weight: bold;
+    color: darkblue;
+    align-self: center;
+}
+
+.item p:nth-child(4):before {
+    content: 'Price: $'
 }
 
 .item button {
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-end;
-padding: 0.5em 0.5em;
-/* border-color: black; */
-border-style: outset;
-background-color: rgb(3, 161, 3);
-font-weight: bolder;
-font-size: 11px;
-color: whitesmoke;
-text-transform: uppercase;
-align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.5em 0.5em;
+    /* border-color: black; */
+    border-style: outset;
+    background-color: rgb(3, 161, 3);
+    font-weight: bolder;
+    font-size: 11px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    align-self: center;
 }
 
 .item button:hover {
-background-color: rgb(87, 98, 169);
-color: black;
-font-weight: bold; 
-
+    background-color: rgb(87, 98, 169);
+    color: black;
+    font-weight: bold; 
 }
 
 .remove, .add-one, .remove-one, .update {
-box-sizing: auto;
-text-align: center;
-border-radius: 1em;
-padding: 0.4em;
-margin: 0.2em;
+    box-sizing: auto;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.4em;
+    margin: 0.2em;
 }
 
 
 footer {
-display: flex;
-flex-direction: column;
-align-content: center;
-justify-content: center;
-align-items: center;
-
-margin: 2em 0 0 0;
-padding: 2em;
-background-color: #eef1f7;
-border-style: onset;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 0 0;
+    padding: 2em;
+    background-color: #eef1f7;
+    border-style: onset;
 }
 
 #cart-qty, #cart-total{
